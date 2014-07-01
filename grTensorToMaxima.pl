@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 #Written by W Brenna
 #July 1 2014
+#Licenced under GPLv2 - should be included in this repository.
 
 if ($#ARGV < 1 ) {
 		print STDERR "Usage: grTensorToMaxima.pl grTensorFileName cTensorFileName\n";
@@ -100,20 +101,3 @@ for (my $i=0; $i<$#dependsArr+1; $i++) {
 }
 print $writeFile "disp(lg);\ncmetric();\n";
 close $writeFile;
-
-
-
-#testing for bracket searching
-			#my @bracketedFunction = $coordTmp1 =~ /\((.*)\)/;
-			#$coordTmp1 =~ s/^.*\((?:[^\(\)]++|(?0))*+\).*$/\0/g;	#Remove bracketed text
-			#$coordTmp2 = grep(/\(.*\)/i,$coordTmp1);
-			#$coordTmp1 =~ s/^.*\((?:[^\(\)]++|(?0))*+\).*$/\\\1/g;	#Remove bracketed text
-			#print $coordTmp1 . "\n";
-			#my @textTmp = extract_bracketed($coordTmp, '()' );
-			#print $textTmp[1] . "\n";
-			#@bracketedFunction = $2;
-			#$coordTmp1 =~ s/(^|[\*\/\+\-])((?!sin|cos|tan|exp|sqrt|log)[a-zA-Z\_]+)\((?:[^\(\)]++|(?0))*+\)/$1$2/g;	#Remove bracketed text
-			#my @bracketedFunction = grep(/(^|[\*\/\+\-])((?!sin|cos|tan|exp|sqrt|log)[a-zA-Z\_]+) \( (?: [^\(\))]* | (?0) )* \)/$1/i,$coordTmp1);
-			#my @bracketedFunction = $coordTmp1 =~ /\*?\/?\+?\-?([a-zA-Z\_]*) \( (?: [^\(\))]* | (?0) )* \)/xg;
-			#(sin|cos|tan|sqrt|exp|cosh|sinh|tanh)
-			#my @bracketedArray = $coordTmp2 =~ /( \( (?: [^\(\)]* | (?0) )* \) )/xg;

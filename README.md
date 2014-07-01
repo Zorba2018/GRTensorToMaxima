@@ -9,7 +9,7 @@ Usage
 ```
 grTensorToMaxima.pl GRTensorFile.mpl MaximaMetricFile.mac
 maxima
-(%i0) read("MaximaMetricFile.mac");
+(%i1) read("MaximaMetricFile.mac");
 ```
 
 You do not need to initialize ctensor when you read from the translated file.
